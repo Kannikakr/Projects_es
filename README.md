@@ -31,9 +31,12 @@ and alerts are triggered when specific conditions are met.
 ### Materials and Methods:
 
 ● Microcontroller: Arduino Uno
+
 ● Sensors: DHT11 for temperature and humidity, potentiometer for soil moisture,
 PIR sensor for motion detection, and LDR for light detection.
+
 ● Actuators: Servo motor for controlling irrigation, LED and buzzer for alerts.
+
 ● Modules: RTC (DS3231) for timekeeping, LCD (I2C) for real-time data display.
 
 ### Working of Each Sensor:
