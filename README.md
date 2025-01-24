@@ -126,3 +126,5 @@ buzzer provide visual and audible alerts.
 
     ○ The LCD provides real-time feedback, showing temperature, humidity, moisture levels, pest detection status, and the current time from the RTCmodule. This information helps users monitor the system and make informed decisions.
 
+![Image](https://github.com/user-attachments/assets/7c12e78d-112d-457a-be45-b21d7f7df1c6)
+
