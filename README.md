@@ -204,7 +204,7 @@ an infrared (IR) sensor, a button, and a servo motor. Here’s a breakdown:
    ○ Operates the servo to dispense food. \
    ○ Increases feed count and decreases food amount. \
    ○ If food is exhausted, display "Out of Food!" on the LCD. 
-   
+
 ### Conclusion :
 Arduino-based food dispensing systems effectively integrate a real-time clock, LCD display, IR
 sensor, button, and servo motor to automate and manage feeding. The system tracks and
@@ -213,3 +213,5 @@ using an IR sensor and a manual button, it provides flexible feeding options, wh
 screen keeps users informed about the feed count and remaining food. The RTC ensures
 accurate timekeeping for any time-based functions. Overall, this setup offers a practical solution
 for automated feeding with real-time monitoring and user interaction.
+
+![Image](https://github.com/user-attachments/assets/fad2d69e-19a2-4b7e-88eb-4d1c189a3e30)
