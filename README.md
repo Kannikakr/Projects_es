@@ -128,6 +128,8 @@ buzzer provide visual and audible alerts.
 
 ![Image](https://github.com/user-attachments/assets/7c12e78d-112d-457a-be45-b21d7f7df1c6)
 
+<hr>
+
 # Projects : Smart Pet Feeder
 
 ### Objective : 
@@ -149,13 +151,13 @@ feeding.
 
 ### Circuit Diagram Connections:
 
-1. LCD (I2C):
+1. LCD (I2C) :
 
    ○ VCC to 5V \
    ○ GND to GND \
    ○ SDA to A4 \
    ○ SCL to A5 
-2. RTC (DS3231): 
+2. RTC (DS3231) : 
 
    ○ VCC to 5V \
    ○ GND to GND \
@@ -163,13 +165,13 @@ feeding.
    ○ SCL to A5 \
    ○ SQW to Digital Pin 4 (optional, for time-based actions)
 
-3. Servo Motor: 
+3. Servo Motor : 
 
    ○ Signal to Pin 9 \
    ○ VCC to 5V \
    ○ GND to GND 
 
-4. IR Sensor: 
+4. IR Sensor : 
 
    ○ Signal to Pin 2 \
    ○ VCC to 5V \
@@ -179,27 +181,31 @@ feeding.
 This Arduino sketch controls a food dispensing system using an LCD, a real-time clock (RTC),
 an infrared (IR) sensor, a button, and a servo motor. Here’s a breakdown:
 
-1. Libraries and Initialization:
+#### 1. Libraries and Initialization:
 
    ○ Includes libraries for I2C LCD, Servo, and RTC. \
    ○ Initializes LCD at address 0x27, RTC, and Servo.
-2. Pin Definitions:
+
+#### 2. Pin Definitions:
 
    ○ irSensorPin: Detects presence to trigger feeding. \
    ○ feedButtonPin: Manual feed button. \
    ○ sqwPin: Square Wave pin for RTC.
-3. Setup Function:
+
+#### 3. Setup Function:
 
    ○ Initializes serial communication and LCD. \
    ○ Configures pins and attaches the servo. \
    ○ Checks RTC functionality and sets the time if needed. \
    ○ Displays initial feed count and food amount on the LCD.
-4. Loop Function:
+
+#### 4. Loop Function:
 
    ○ Updates the LCD with the current time from RTC every second.\
    ○ Check IR sensor and button to trigger food dispensing. \
    ○ Displays remaining food on LCD.
-5. Dispense Food Function:
+
+#### 5. Dispense Food Function:
 
    ○ Operates the servo to dispense food. \
    ○ Increases feed count and decreases food amount. \
@@ -215,3 +221,84 @@ accurate timekeeping for any time-based functions. Overall, this setup offers a 
 for automated feeding with real-time monitoring and user interaction.
 
 ![Image](https://github.com/user-attachments/assets/fad2d69e-19a2-4b7e-88eb-4d1c189a3e30)
+
+<hr>
+
+# Projects 3 : Arduino OLED Clock with RTC Module
+
+### Project Description
+
+This project is an Arduino-based digital clock that utilizes an OLED display and a DS3231 RTC (Real-Time Clock) module to provide accurate timekeeping. The OLED screen displays real-time hours, minutes, seconds, date, and day of the week. The system is initialized through Arduino, ensuring synchronization with the system's time and providing a user-friendly visual output.
+
+### Components Used :
+
+* Arduino Board (Uno/Nano)
+* OLED Display (128x64 pixels, I2C interface)
+* RTC Module (DS3231)
+* Connecting Wires
+* Breadboard
+* Power Supply (USB or 9V battery)
+
+### Circuit Diagram : 
+
+#### 1. OLED Display Connections:
+
+* VCC to Arduino 3.3V/5V
+* GND to Arduino GND
+* SDA to Arduino A4 (SDA pin)
+* SCL to Arduino A5 (SCL pin)
+
+#### 2. RTC DS3231 Module Connections:
+
+* VCC to Arduino 5V
+* GND to Arduino GND
+* SDA to Arduino A4 (SDA pin)
+* SCL to Arduino A5 (SCL pin)
+
+### Code Explanation : 
+
+The code initializes the OLED display and the RTC module to display the current time and date.
+
+#### Key Functionalities:
+
+#### Setup Function:
+
+* Initializes the serial communication for debugging.
+* Checks if the RTC module is detected.
+* Initializes the OLED display and displays a welcome message.
+
+#### Loop Function:
+
+* Reads current time and date from the RTC module.
+* Updates the OLED display with formatted time and date.
+* Displays the day of the week.
+
+#### Libraries Used:
+
+* SPI.h : For serial peripheral interface communication.
+* Wire.h : For I2C communication.
+* Adafruit_GFX.h : Graphics library for drawing on the display.
+* Adafruit_SSD1306.h : Driver for the OLED display.
+* RTClib.h : Library to interact with the RTC module.
+
+### Troubleshooting : 
+
+#### 1. OLED display not working:
+
+* Check I2C connections (SDA and SCL pins).
+* Ensure correct I2C address (default: 0x3C).
+
+#### 2. RTC module not detected:
+
+* Verify power and ground connections.
+* Check for correct wiring of SDA and SCL pins.
+
+#### 3. Incorrect time displayed:
+
+* Use rtc.adjust(DateTime(__DATE__, __TIME__)) to set the correct time.
+
+### Conclusion : 
+
+This project demonstrates how to create a real-time clock using an Arduino, OLED display, and RTC module. It provides an easy way to display time and date in real time with minimal hardware requirements.
+
+![Image](https://github.com/user-attachments/assets/52550478-df3e-4935-b6e9-409c1320dfc2)
