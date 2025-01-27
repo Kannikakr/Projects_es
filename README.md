@@ -316,3 +316,4 @@ This project demonstrates how to create a real-time clock using an Arduino, OLED
 
 The temperature values in both Celsius and Fahrenheit are printed to the serial monitor. 2.A delay of one second is included to space out the readings.
 
+![Screenshot 2024-08-06 210339](https://github.com/user-attachments/assets/624cb109-b40f-428d-9661-304290abfe8b)
