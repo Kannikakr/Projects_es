@@ -302,3 +302,17 @@ The code initializes the OLED display and the RTC module to display the current 
 This project demonstrates how to create a real-time clock using an Arduino, OLED display, and RTC module. It provides an easy way to display time and date in real time with minimal hardware requirements.
 
 ![Image](https://github.com/user-attachments/assets/52550478-df3e-4935-b6e9-409c1320dfc2)
+
+# Project 4 : Temperature_sensor_reading
+      * The serial communication is started at a baud rate of 9600 to allow data to be sent to the computer for monitoring.
+      * The pin connected to the LM35 sensor (A0) is set up as an input.
+
+### Reading and Converting the Sensor Data:
+* In a loop, the code continuously reads the analog value from the LM35 sensor.
+* This analog value is then converted to a temperature in Celsius. The conversion factor is derived from the sensor's characteristics, where the output voltage is linearly proportional to the temperature in Celsius.
+* The temperature in Celsius is then converted to Fahrenheit.
+
+### Displaying the Data:
+
+The temperature values in both Celsius and Fahrenheit are printed to the serial monitor. 2.A delay of one second is included to space out the readings.
+
